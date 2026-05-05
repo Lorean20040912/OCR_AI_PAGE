@@ -1,7 +1,7 @@
 function Procesare() {
     return (
      <div>
-       <h1>Procesare</h1>
+       <h1>Process</h1>
      </div>
     )
 }
