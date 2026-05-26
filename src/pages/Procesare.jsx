@@ -1,12 +1,19 @@
-import InvoiceForm from "../components/StatsCard"
-import InvoicePreview from "../components/StatsCard"
-import { useState, useEffect } from 'react'
+import InvoiceForm from "../components/InvoiceForm"
+import InvoicePreview from "../components/InvoicePreview"
+import { useState } from 'react'
 
 function Procesare() {
+    const [imagine, setImagine] = useState(null)
+
+    function handleFisier(e) {
+        setImagine(URL.createObjectURL(e.target.files[0]))
+    }
     return (
-     <div>
-       <h1>Process</h1>
-     </div>
+        <div>
+            <input type="file" accept="image/*" onChange={handleFisier} />
+            <InvoicePreview imagine={imagine} />
+            <InvoiceForm />
+        </div>
     )
 }
 export default Procesare
