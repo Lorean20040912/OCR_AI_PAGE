@@ -1,7 +1,7 @@
 function InvoicePreview({ imagine }) {
     return (
-        <div>
-            {imagine ? <img src={imagine} /> : <p>Nicio imagine</p>}
+        <div className="preview-card">
+            {imagine ? <img src={imagine} style={{width: '100%'}} /> : <p>Nicio imagine</p>}
         </div>
     )
 }

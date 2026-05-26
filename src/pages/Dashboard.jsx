@@ -10,13 +10,15 @@ function Dashboard() {
         setFacturi(getFacturi())
     }, [])
     return (
-     <div>
+        <div className="dashboard">
        <h1>Dashboard</h1>
-       <StatsCard numar={facturi.length} titlu="Total Facturi"/>
-       <StatsCard numar={facturi.filter(f => f.status === 'aprobata').length} titlu="Aprobate"/>
-       <StatsCard numar={facturi.filter(f => f.status === 'respinsa').length} titlu="Respinse"/>
-       <StatsCard numar={facturi.filter(f => f.status === 'in_asteptare').length} titlu="In asteptare"/>
+            <div className="stats-grid">
+         <StatsCard numar={facturi.length} titlu="Total Facturi" clasa="total"/>
+         <StatsCard numar={facturi.filter(f => f.status === 'aprobata').length} titlu="Aprobate" clasa="aprobate"/>
+         <StatsCard numar={facturi.filter(f => f.status === 'respinsa').length} titlu="Respinse" clasa="respinse"/>
+         <StatsCard numar={facturi.filter(f => f.status === 'in_asteptare').length} titlu="In asteptare" clasa="asteptare"/>
      </div>
+        </div>
     )
 }
 export default Dashboard

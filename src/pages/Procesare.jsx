@@ -9,10 +9,12 @@ function Procesare() {
         setImagine(URL.createObjectURL(e.target.files[0]))
     }
     return (
-        <div>
+        <div className="procesare">
             <input type="file" accept="image/*" onChange={handleFisier} />
-            <InvoicePreview imagine={imagine} />
-            <InvoiceForm />
+            <div className="procesare-content">
+                <InvoicePreview imagine={imagine} />
+                <InvoiceForm />
+            </div>
         </div>
     )
 }

@@ -31,16 +31,16 @@ function InvoiceForm() {
     }
 
     return (
-        <div>
+        <div className="form-card">
             <input name="numarFactura" placeholder="Numar Factura" onChange={handleChange} />
             <input name="dataFactura" placeholder="Data Facturii" onChange={handleChange} />
             <input name="furnizor" placeholder="Furnizor" onChange={handleChange} />
             <input name="idno" placeholder="IDNO" onChange={handleChange} />
             <input name="valoareTotala" placeholder="Valoarea Totala" onChange={handleChange} />
             <input name="tva" placeholder="TVA" onChange={handleChange} />
-            <button onClick={handleAproba}>Aprobă</button>
-            <button onClick={handleRespinge}>Respinge</button>
-            <button onClick={handleExport}>Export JSON</button>
+            <button className="btn-aproba" onClick={handleAproba}>Aprobă</button>
+            <button className="btn-respinge" onClick={handleRespinge}>Respinge</button>
+            <button className="btn-export" onClick={handleExport}>Export JSON</button>
         </div>
     )
 
